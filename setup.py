@@ -12,7 +12,7 @@ def readfile(fname):
 
 setup(
     name='trampoline',
-    version='0.1.1',
+    version='0.1.2',
     description='Simple and tiny yield-based trampoline implementation.',
     long_description=readfile('README.rst'),
     license='MIT',
