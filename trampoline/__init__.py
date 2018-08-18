@@ -21,8 +21,8 @@ def trampoline(call):
                 ex, exception = exception, None
                 res = stack[-1].throw(ex)
             elif retval is None:
-                # We need to differentiate between None and Non-None,
-                # because generators can only be started with next().
+                # We use next() here for nicer exceptions if an invalid value
+                # was yielded.
                 res = next(stack[-1])
             else:
                 value, retval = retval, None
